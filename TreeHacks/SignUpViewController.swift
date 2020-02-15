@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
 
@@ -22,7 +24,64 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var Password: UITextField!
     
     
+    func validateFields() -> String?
+    {
+        
+        if FirstName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
+            || LastName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
+            || Email.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
+            || Password.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all fields"
+        }
+        
+    /*
+        let cleanedPassword = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            return
+        }
+        */
+        
+
+        return nil
+    }
+    
+    
     @IBAction func SignUpPressed(_ sender: Any) {
+        // Validate Fields
+        let error = validateFields()
+        
+        if error != nil {
+            ErrorLabel.text = error!
+            ErrorLabel.alpha = 1
+        }
+        
+        // Create cleaned versions of data
+        let firstName = FirstName.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let lastName = LastName.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let email = Email.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let password = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
+        // Create the user
+        Auth.auth().createUser(withEmail: "", password: "") { (result, err) in
+            if err != nil {
+                
+                self.ErrorLabel.text = error!
+                self.ErrorLabel.alpha = 1
+            }
+            else
+            {
+                let db = Firestore.firestore()
+                db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "uid":result!.user.uid ]) { (error) in
+                    if error != nil {
+                        // Show error message
+                    }
+                }
+            }
+        }
+        // Transition to the home screen
+        
     }
     
     
@@ -31,6 +90,8 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ErrorLabel.alpha = 0
 
         // Do any additional setup after loading the view.
     }
