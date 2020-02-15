@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		A7264E9723F864560076F3D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7264E9523F864560076F3D0 /* Main.storyboard */; };
 		A7264E9923F864580076F3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7264E9823F864580076F3D0 /* Assets.xcassets */; };
 		A7264E9C23F864580076F3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7264E9A23F864580076F3D0 /* LaunchScreen.storyboard */; };
+		A7264EA423F864EC0076F3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */; };
+		A757FDB323F870640094C025 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB223F870640094C025 /* LogInViewController.swift */; };
+		A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB423F8709D0094C025 /* SignUpViewController.swift */; };
+		CA9BDC3DE0F1E4D3FBB390AC /* Pods_TreeHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreeHacks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E2CF2F2885B91620C87D1EA /* Pods-TreeHacks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreeHacks.release.xcconfig"; path = "Target Support Files/Pods-TreeHacks/Pods-TreeHacks.release.xcconfig"; sourceTree = "<group>"; };
+		755A8E7A6BA643E81E33D0A5 /* Pods-TreeHacks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreeHacks.debug.xcconfig"; path = "Target Support Files/Pods-TreeHacks/Pods-TreeHacks.debug.xcconfig"; sourceTree = "<group>"; };
 		A7264E8C23F864560076F3D0 /* TreeHacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeHacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7264E8F23F864560076F3D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7264E9123F864560076F3D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		A7264E9823F864580076F3D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7264E9B23F864580076F3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7264E9D23F864580076F3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A757FDB223F870640094C025 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		A757FDB423F8709D0094C025 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9BDC3DE0F1E4D3FBB390AC /* Pods_TreeHacks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		692735952370E35F4B9E7608 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				755A8E7A6BA643E81E33D0A5 /* Pods-TreeHacks.debug.xcconfig */,
+				6E2CF2F2885B91620C87D1EA /* Pods-TreeHacks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A7264E8323F864560076F3D0 = {
 			isa = PBXGroup;
 			children = (
 				A7264E8E23F864560076F3D0 /* TreeHacks */,
 				A7264E8D23F864560076F3D0 /* Products */,
+				692735952370E35F4B9E7608 /* Pods */,
+				B5AB8AFA30BC94C2202A227D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +78,7 @@
 		A7264E8E23F864560076F3D0 /* TreeHacks */ = {
 			isa = PBXGroup;
 			children = (
+				A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */,
 				A7264E8F23F864560076F3D0 /* AppDelegate.swift */,
 				A7264E9123F864560076F3D0 /* SceneDelegate.swift */,
 				A7264E9323F864560076F3D0 /* ViewController.swift */,
@@ -63,8 +86,18 @@
 				A7264E9823F864580076F3D0 /* Assets.xcassets */,
 				A7264E9A23F864580076F3D0 /* LaunchScreen.storyboard */,
 				A7264E9D23F864580076F3D0 /* Info.plist */,
+				A757FDB223F870640094C025 /* LogInViewController.swift */,
+				A757FDB423F8709D0094C025 /* SignUpViewController.swift */,
 			);
 			path = TreeHacks;
+			sourceTree = "<group>";
+		};
+		B5AB8AFA30BC94C2202A227D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7264EA023F864580076F3D0 /* Build configuration list for PBXNativeTarget "TreeHacks" */;
 			buildPhases = (
+				3B6D48432CA0CDA7C3221EC6 /* [CP] Check Pods Manifest.lock */,
 				A7264E8823F864560076F3D0 /* Sources */,
 				A7264E8923F864560076F3D0 /* Frameworks */,
 				A7264E8A23F864560076F3D0 /* Resources */,
+				36BAA8CA2D7B245A0C4FD064 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7264E9C23F864580076F3D0 /* LaunchScreen.storyboard in Resources */,
+				A7264EA423F864EC0076F3D0 /* GoogleService-Info.plist in Resources */,
 				A7264E9923F864580076F3D0 /* Assets.xcassets in Resources */,
 				A7264E9723F864560076F3D0 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +169,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36BAA8CA2D7B245A0C4FD064 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B6D48432CA0CDA7C3221EC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TreeHacks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A7264E8823F864560076F3D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A757FDB323F870640094C025 /* LogInViewController.swift in Sources */,
 				A7264E9423F864560076F3D0 /* ViewController.swift in Sources */,
 				A7264E9023F864560076F3D0 /* AppDelegate.swift in Sources */,
 				A7264E9223F864560076F3D0 /* SceneDelegate.swift in Sources */,
+				A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +362,7 @@
 		};
 		A7264EA123F864580076F3D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 755A8E7A6BA643E81E33D0A5 /* Pods-TreeHacks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +381,7 @@
 		};
 		A7264EA223F864580076F3D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E2CF2F2885B91620C87D1EA /* Pods-TreeHacks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
