@@ -64,8 +64,8 @@ class SignUpViewController: UIViewController {
         let password = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         
         // Create the user
-        Auth.auth().createUser(withEmail: "", password: "") { (result, err) in
-            if err != nil {
+        Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+            if err != nil && error != nil {
                 
                 self.ErrorLabel.text = error!
                 self.ErrorLabel.alpha = 1
