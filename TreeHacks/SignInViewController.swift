@@ -20,7 +20,15 @@ class SignInViewController: UIViewController {
     
     @IBOutlet weak var Password: UITextField!
     
+    
+    
+    
+    
     @IBAction func SignInPressed(_ sender: Any) {
+        
+        // validate text fields
+        
+        // Signing in the user
     }
     
     @IBOutlet weak var ErrorLabel: UILabel!
