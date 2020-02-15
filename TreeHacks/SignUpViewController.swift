@@ -14,9 +14,19 @@ class SignUpViewController: UIViewController {
     
     
     
+    @IBOutlet weak var LastName: UITextField!
     
     
+    @IBOutlet weak var Email: UITextField!
     
+    @IBOutlet weak var Password: UITextField!
+    
+    
+    @IBAction func SignUpPressed(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var ErrorLabel: UILabel!
     
     
     override func viewDidLoad() {

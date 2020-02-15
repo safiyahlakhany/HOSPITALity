@@ -8,9 +8,22 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class SignInViewController: UIViewController {
 
+    @IBOutlet weak var FirstName: UITextField!
     
+    
+    @IBOutlet weak var LastName: UITextField!
+    
+    @IBOutlet weak var Email: UITextField!
+    
+    
+    @IBOutlet weak var Password: UITextField!
+    
+    @IBAction func SignInPressed(_ sender: Any) {
+    }
+    
+    @IBOutlet weak var ErrorLabel: UILabel!
     
     
     override func viewDidLoad() {

@@ -14,7 +14,7 @@
 		A7264E9923F864580076F3D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7264E9823F864580076F3D0 /* Assets.xcassets */; };
 		A7264E9C23F864580076F3D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7264E9A23F864580076F3D0 /* LaunchScreen.storyboard */; };
 		A7264EA423F864EC0076F3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */; };
-		A757FDB323F870640094C025 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB223F870640094C025 /* LogInViewController.swift */; };
+		A757FDB323F870640094C025 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB223F870640094C025 /* SignInViewController.swift */; };
 		A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB423F8709D0094C025 /* SignUpViewController.swift */; };
 		CA9BDC3DE0F1E4D3FBB390AC /* Pods_TreeHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */; };
 /* End PBXBuildFile section */
@@ -32,7 +32,7 @@
 		A7264E9B23F864580076F3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7264E9D23F864580076F3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A757FDB223F870640094C025 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		A757FDB223F870640094C025 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A757FDB423F8709D0094C025 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 				A7264E9823F864580076F3D0 /* Assets.xcassets */,
 				A7264E9A23F864580076F3D0 /* LaunchScreen.storyboard */,
 				A7264E9D23F864580076F3D0 /* Info.plist */,
-				A757FDB223F870640094C025 /* LogInViewController.swift */,
+				A757FDB223F870640094C025 /* SignInViewController.swift */,
 				A757FDB423F8709D0094C025 /* SignUpViewController.swift */,
 			);
 			path = TreeHacks;
@@ -216,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A757FDB323F870640094C025 /* LogInViewController.swift in Sources */,
+				A757FDB323F870640094C025 /* SignInViewController.swift in Sources */,
 				A7264E9423F864560076F3D0 /* ViewController.swift in Sources */,
 				A7264E9023F864560076F3D0 /* AppDelegate.swift in Sources */,
 				A7264E9223F864560076F3D0 /* SceneDelegate.swift in Sources */,

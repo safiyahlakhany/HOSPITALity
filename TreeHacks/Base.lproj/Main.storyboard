@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-588" y="92"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="TreeHacks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="TreeHacks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +83,9 @@
                                 <rect key="frame" x="186" y="589" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="SignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4x-Ws-7ZJ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iru-wN-byb">
                                 <rect key="frame" x="183" y="649" width="84" height="21"/>
@@ -95,6 +98,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="Email" destination="IOU-C8-Lim" id="hGK-aj-HfC"/>
+                        <outlet property="ErrorLabel" destination="Iru-wN-byb" id="3RH-al-fc2"/>
+                        <outlet property="FirstName" destination="6FU-sU-nxq" id="YuO-Im-cMi"/>
+                        <outlet property="LastName" destination="Y1v-hp-1TL" id="MQy-ww-jN9"/>
+                        <outlet property="Password" destination="Wpf-wV-OUl" id="MBX-pc-Buu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,7 +128,7 @@
                                 <rect key="frame" x="158" y="431" width="188" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5PN-Bl-5uX">
                                 <rect key="frame" x="158" y="208" width="188" height="34"/>
@@ -143,6 +153,9 @@
                                 <rect key="frame" x="180" y="595" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="SignUpPressed:" destination="RNq-jn-VaZ" eventType="touchUpInside" id="Ikw-gG-kfg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tug-09-3Fv">
                                 <rect key="frame" x="165" y="680" width="84" height="21"/>
@@ -156,7 +169,11 @@
                         <viewLayoutGuide key="safeArea" id="D6e-Hj-vdJ"/>
                     </view>
                     <connections>
+                        <outlet property="Email" destination="itx-wT-S4R" id="6NR-Ry-TAW"/>
+                        <outlet property="ErrorLabel" destination="Tug-09-3Fv" id="GuR-7s-tA7"/>
                         <outlet property="FirstName" destination="5PN-Bl-5uX" id="mTT-v1-fS3"/>
+                        <outlet property="LastName" destination="mQD-gT-wcO" id="GKI-6R-Wmu"/>
+                        <outlet property="Password" destination="u8w-sh-LCf" id="bil-kY-ADg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JfW-95-Ksf" sceneMemberID="firstResponder"/>
