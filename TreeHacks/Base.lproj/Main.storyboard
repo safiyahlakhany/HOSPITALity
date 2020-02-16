@@ -238,7 +238,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFy-fV-hnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="-183"/>
+            <point key="canvasLocation" x="2262" y="-230"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="CYB-Ii-EYH">
@@ -248,7 +248,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-J1-tBu">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ps-J1-tBu">
                                 <rect key="frame" x="132" y="644" width="150" height="53"/>
                                 <color key="backgroundColor" red="0.34854644540000002" green="0.58394223450000005" blue="0.60392802950000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -262,8 +262,8 @@
                                     <action selector="SignUpPressed:" destination="RNq-jn-VaZ" eventType="touchUpInside" id="Ikw-gG-kfg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tug-09-3Fv">
-                                <rect key="frame" x="149" y="736" width="116.5" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tug-09-3Fv">
+                                <rect key="frame" x="149" y="736" width="116.5" height="92"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.7112042659922585" green="0.24083066568071301" blue="0.19224213953767624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -296,6 +296,8 @@
                                     </pickerView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="wip-Nb-o3T" firstAttribute="top" secondItem="u8w-sh-LCf" secondAttribute="bottom" constant="14" id="3wa-e2-5w3"/>
+                                    <constraint firstAttribute="trailing" secondItem="wip-Nb-o3T" secondAttribute="trailing" constant="20" symbolic="YES" id="EWq-Nn-yIB"/>
                                     <constraint firstAttribute="width" constant="300" id="jU8-Zm-Y5j"/>
                                 </constraints>
                             </stackView>
@@ -303,11 +305,12 @@
                         <color key="backgroundColor" red="0.83195346589999997" green="0.66299206020000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="4Ps-J1-tBu" firstAttribute="centerX" secondItem="N34-xM-ZgD" secondAttribute="centerX" id="2wo-9N-L7u"/>
-                            <constraint firstItem="Tug-09-3Fv" firstAttribute="centerX" secondItem="N34-xM-ZgD" secondAttribute="centerX" id="6HC-Ax-29i"/>
                             <constraint firstItem="stE-uV-8ca" firstAttribute="centerX" secondItem="N34-xM-ZgD" secondAttribute="centerX" id="7MH-cE-EQH"/>
-                            <constraint firstItem="D6e-Hj-vdJ" firstAttribute="bottom" secondItem="Tug-09-3Fv" secondAttribute="bottom" constant="96" id="JuL-Ha-3wh"/>
-                            <constraint firstItem="Tug-09-3Fv" firstAttribute="top" secondItem="4Ps-J1-tBu" secondAttribute="bottom" constant="39" id="Ruh-rF-WIU"/>
+                            <constraint firstItem="4Ps-J1-tBu" firstAttribute="leading" secondItem="D6e-Hj-vdJ" secondAttribute="leading" constant="132" id="7wS-qa-O3k"/>
+                            <constraint firstItem="Tug-09-3Fv" firstAttribute="centerX" secondItem="N34-xM-ZgD" secondAttribute="centerX" id="D3e-Ys-EGj"/>
+                            <constraint firstItem="D6e-Hj-vdJ" firstAttribute="trailing" secondItem="4Ps-J1-tBu" secondAttribute="trailing" constant="132" id="Dzd-dT-hgc"/>
                             <constraint firstItem="stE-uV-8ca" firstAttribute="top" secondItem="D6e-Hj-vdJ" secondAttribute="top" constant="100" id="pr2-af-uG3"/>
+                            <constraint firstItem="Tug-09-3Fv" firstAttribute="top" secondItem="4Ps-J1-tBu" secondAttribute="bottom" constant="39" id="roW-cI-2XM"/>
                             <constraint firstItem="4Ps-J1-tBu" firstAttribute="leading" secondItem="D6e-Hj-vdJ" secondAttribute="leading" constant="132" id="uoE-Db-8Q8"/>
                             <constraint firstItem="D6e-Hj-vdJ" firstAttribute="trailing" secondItem="4Ps-J1-tBu" secondAttribute="trailing" constant="132" id="upJ-TG-ohJ"/>
                         </constraints>

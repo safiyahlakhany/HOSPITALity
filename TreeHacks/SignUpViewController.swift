@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseAuth
+//import FirebaseAuth
 import Firebase
 
 class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -53,6 +53,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func validateFields() -> String?
     {
+
         //pickerViewCont
         if FirstName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
             || LastName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172494F50A8D8AFCF2190A67 /* libPods-TreeHacks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2F826C640A17C090440D1DF /* libPods-TreeHacks.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		A7264E9023F864560076F3D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7264E8F23F864560076F3D0 /* AppDelegate.swift */; };
 		A7264E9223F864560076F3D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7264E9123F864560076F3D0 /* SceneDelegate.swift */; };
 		A7264E9423F864560076F3D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7264E9323F864560076F3D0 /* ViewController.swift */; };
@@ -16,7 +17,8 @@
 		A7264EA423F864EC0076F3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */; };
 		A757FDB323F870640094C025 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB223F870640094C025 /* SignInViewController.swift */; };
 		A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB423F8709D0094C025 /* SignUpViewController.swift */; };
-		CA9BDC3DE0F1E4D3FBB390AC /* Pods_TreeHacks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */; };
+		A7A503B423F903A5007294BD /* libFirebaseAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A503B223F903A5007294BD /* libFirebaseAuth.a */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A7A503B523F903A5007294BD /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A503B323F903A5007294BD /* libFirebaseCore.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +34,13 @@
 		A7264E9B23F864580076F3D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7264E9D23F864580076F3D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7264EA323F864EC0076F3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A7486B8423F8FD930026F438 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7486B8723F8FDA20026F438 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A757FDB223F870640094C025 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A757FDB423F8709D0094C025 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A7A503B223F903A5007294BD /* libFirebaseAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A503B323F903A5007294BD /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F826C640A17C090440D1DF /* libPods-TreeHacks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TreeHacks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9BDC3DE0F1E4D3FBB390AC /* Pods_TreeHacks.framework in Frameworks */,
+				A7A503B423F903A5007294BD /* libFirebaseAuth.a in Frameworks */,
+				172494F50A8D8AFCF2190A67 /* libPods-TreeHacks.a in Frameworks */,
+				A7A503B523F903A5007294BD /* libFirebaseCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,7 @@
 				A7264E8D23F864560076F3D0 /* Products */,
 				692735952370E35F4B9E7608 /* Pods */,
 				B5AB8AFA30BC94C2202A227D /* Frameworks */,
+				A7A503B123F901E2007294BD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,10 +102,22 @@
 			path = TreeHacks;
 			sourceTree = "<group>";
 		};
-		B5AB8AFA30BC94C2202A227D /* Frameworks */ = {
+		A7A503B123F901E2007294BD /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				1AA0CE939479DDFF8CEEC9FE /* Pods_TreeHacks.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B5AB8AFA30BC94C2202A227D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7A503B223F903A5007294BD /* libFirebaseAuth.a */,
+				A7A503B323F903A5007294BD /* libFirebaseCore.a */,
+				A7486B8723F8FDA20026F438 /* FirebaseCore.framework */,
+				A7486B8423F8FD930026F438 /* FirebaseAuth.framework */,
+				C2F826C640A17C090440D1DF /* libPods-TreeHacks.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,7 +133,7 @@
 				A7264E8823F864560076F3D0 /* Sources */,
 				A7264E8923F864560076F3D0 /* Frameworks */,
 				A7264E8A23F864560076F3D0 /* Resources */,
-				36BAA8CA2D7B245A0C4FD064 /* [CP] Embed Pods Frameworks */,
+				E296A400F492CA1C15A84FD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,23 +192,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		36BAA8CA2D7B245A0C4FD064 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3B6D48432CA0CDA7C3221EC6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +212,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E296A400F492CA1C15A84FD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TreeHacks/Pods-TreeHacks-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -296,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
