@@ -19,6 +19,8 @@
 		A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A757FDB423F8709D0094C025 /* SignUpViewController.swift */; };
 		A7A503B423F903A5007294BD /* libFirebaseAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A503B223F903A5007294BD /* libFirebaseAuth.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A7A503B523F903A5007294BD /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A503B323F903A5007294BD /* libFirebaseCore.a */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A7A503B723F92284007294BD /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A503B623F92284007294BD /* PatientViewController.swift */; };
+		A7A503B923F925D5007294BD /* RequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A503B823F925D5007294BD /* RequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A757FDB423F8709D0094C025 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A7A503B223F903A5007294BD /* libFirebaseAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A503B323F903A5007294BD /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A503B623F92284007294BD /* PatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
+		A7A503B823F925D5007294BD /* RequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestViewController.swift; sourceTree = "<group>"; };
 		C2F826C640A17C090440D1DF /* libPods-TreeHacks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TreeHacks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 				A7264E9123F864560076F3D0 /* SceneDelegate.swift */,
 				A7264E9323F864560076F3D0 /* ViewController.swift */,
 				A7264E9523F864560076F3D0 /* Main.storyboard */,
+				A7A503B823F925D5007294BD /* RequestViewController.swift */,
+				A7A503B623F92284007294BD /* PatientViewController.swift */,
 				A7264E9823F864580076F3D0 /* Assets.xcassets */,
 				A7264E9A23F864580076F3D0 /* LaunchScreen.storyboard */,
 				A7264E9D23F864580076F3D0 /* Info.plist */,
@@ -240,6 +246,8 @@
 			files = (
 				A757FDB323F870640094C025 /* SignInViewController.swift in Sources */,
 				A7264E9423F864560076F3D0 /* ViewController.swift in Sources */,
+				A7A503B923F925D5007294BD /* RequestViewController.swift in Sources */,
+				A7A503B723F92284007294BD /* PatientViewController.swift in Sources */,
 				A7264E9023F864560076F3D0 /* AppDelegate.swift in Sources */,
 				A7264E9223F864560076F3D0 /* SceneDelegate.swift in Sources */,
 				A757FDB523F8709D0094C025 /* SignUpViewController.swift in Sources */,

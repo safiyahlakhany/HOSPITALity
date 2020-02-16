@@ -90,10 +90,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let lastName = LastName.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let email = Email.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let password = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        
+        let selectedValue = AccTypePicker.selectedRow(inComponent: 0)
+        print(selectedValue)
         // Create the user
-        Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-            if err != nil && error != nil {
+        Firebase.Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+            if err != nil || error != nil {
                 
                 self.ErrorLabel.text = error!
                 self.ErrorLabel.alpha = 1
@@ -101,15 +102,38 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             else
             {
                 let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "isPatient":true, "uid":result!.user.uid ]) { (error) in
-                    if error != nil {
-                        // Show error message
+                if let user = result?.user {
+                    
+                    db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "isPatient":true, "uid":user.uid ]) { (error) in
+                        if error != nil {
+                            print("Error")
+                            // Show error message
+                        } else {
+                            self.transitionToHome(accountType: "", sender: sender)
+                        }
                     }
+                } else {
+                    print("No result")
                 }
             }
         }
         // Transition to the home screen
         
+    }
+    
+    
+    func transitionToHome(accountType: String, sender: Any)
+    {
+        /*let homeViewController = storyboard?.instantiateViewController(withIdentifier: "RequestViewController")*/
+        
+//        let homeViewController = storyboard?.instantiateViewController(identifier: "RequestViewController") as? RequestViewController
+//
+//        view.window?.rootViewController = homeViewController
+//        view.window?.makeKeyAndVisible()
+        performSegue(withIdentifier: "signupnext", sender: sender)
+        
+            
+            /*storyboard?.instantiateViewController(identifier: Storyboard.PatientViewController)as? PatientViewController*/
     }
     
     
