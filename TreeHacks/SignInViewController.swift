@@ -1,5 +1,5 @@
 //
-//  LogInViewController.swift
+//  SignInViewController.swift
 //  TreeHacks
 //
 //  Created by Safiyah Lakhany on 2/15/20.
@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
 
-    @IBOutlet weak var FirstName: UITextField!
+
     
     
-    @IBOutlet weak var LastName: UITextField!
     
     @IBOutlet weak var Email: UITextField!
     
@@ -28,7 +28,16 @@ class SignInViewController: UIViewController {
         
         // validate text fields
         
+        let email = Email.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let password = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        
         // Signing in the user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                self.ErrorLabel.text = error!.localizedDescription
+                self.ErrorLabel.alpha = 1
+            }
+        }
     }
     
     @IBOutlet weak var ErrorLabel: UILabel!

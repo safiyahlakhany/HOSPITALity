@@ -10,7 +10,16 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.pickerData.count
+    }
+    
 
     @IBOutlet weak var FirstName: UITextField!
     
@@ -24,9 +33,27 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var Password: UITextField!
     
     
+    
+    @IBOutlet weak var AccTypePicker: UIPickerView!
+    
+    
+    var pickerData: [String] = [String]()
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+          return pickerData[row]
+      }
+    
+      /*func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+          myLabel.text = pickerData[row]
+      }*/
+    
+    /*func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        <#code#>
+    }*/
+    
     func validateFields() -> String?
     {
-        
+        //pickerViewCont
         if FirstName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
             || LastName.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
             || Email.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) == ""
@@ -73,7 +100,7 @@ class SignUpViewController: UIViewController {
             else
             {
                 let db = Firestore.firestore()
-                db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "uid":result!.user.uid ]) { (error) in
+                db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "isPatient":true, "uid":result!.user.uid ]) { (error) in
                     if error != nil {
                         // Show error message
                     }
@@ -90,6 +117,11 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.AccTypePicker.delegate = self
+        self.AccTypePicker.dataSource = self
+        self.pickerData = ["Volunteer", "Patient"]
         
         ErrorLabel.alpha = 0
 
