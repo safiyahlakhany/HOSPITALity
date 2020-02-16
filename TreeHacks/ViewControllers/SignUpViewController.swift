@@ -94,7 +94,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         print(selectedValue)
         // Create the user
         Firebase.Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-            if err != nil || error != nil {
+            if err != nil && error != nil {
                 
                 self.ErrorLabel.text = error!
                 self.ErrorLabel.alpha = 1
@@ -104,12 +104,12 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let db = Firestore.firestore()
                 if let user = result?.user {
                     
-                    db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "isPatient":true, "uid":user.uid ]) { (error) in
+                    db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "isPatient":selectedValue, "uid":user.uid ]) { (error) in
                         if error != nil {
                             print("Error")
                             // Show error message
                         } else {
-                            self.transitionToHome(accountType: "", sender: sender)
+                            self.transitionToHome(accountType: selectedValue, sender: sender)
                         }
                     }
                 } else {
@@ -117,23 +117,16 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 }
             }
         }
-        // Transition to the home screen
+ 
         
     }
     
     
-    func transitionToHome(accountType: String, sender: Any)
+    func transitionToHome(accountType: Int, sender: Any)
     {
-        /*let homeViewController = storyboard?.instantiateViewController(withIdentifier: "RequestViewController")*/
-        
-//        let homeViewController = storyboard?.instantiateViewController(identifier: "RequestViewController") as? RequestViewController
-//
-//        view.window?.rootViewController = homeViewController
-//        view.window?.makeKeyAndVisible()
         performSegue(withIdentifier: "signupnext", sender: sender)
         
-            
-            /*storyboard?.instantiateViewController(identifier: Storyboard.PatientViewController)as? PatientViewController*/
+
     }
     
     
