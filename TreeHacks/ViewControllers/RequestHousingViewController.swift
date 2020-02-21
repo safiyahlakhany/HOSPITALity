@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
+
 
 class RequestHousingViewController: UIViewController {
     
+    var user = Firebase.Auth.auth().currentUser
+// firuser
     
     @IBOutlet weak var LocationTF: UITextField!
     
@@ -23,11 +27,21 @@ class RequestHousingViewController: UIViewController {
     
     @IBAction func SubmitPressed(_ sender: Any)
     {
-       // UI
+        Firebase.Auth.auth()
     }
     
     
     override func viewDidLoad() {
+        
+        if ((user) != nil) {
+            print(user!)
+            
+        
+        } else {
+            print("no user - error")
+        }
+        
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

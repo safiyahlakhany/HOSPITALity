@@ -12,6 +12,10 @@ import Firebase
 
 class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    
+    let db = Firestore.firestore()
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -23,19 +27,13 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     @IBOutlet weak var FirstName: UITextField!
     
-    
-    
     @IBOutlet weak var LastName: UITextField!
-    
     
     @IBOutlet weak var Email: UITextField!
     
     @IBOutlet weak var Password: UITextField!
     
-    
-    
     @IBOutlet weak var AccTypePicker: UIPickerView!
-    
     
     var pickerData: [String] = [String]()
     
@@ -43,13 +41,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
           return pickerData[row]
       }
     
-      /*func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          myLabel.text = pickerData[row]
-      }*/
-    
-    /*func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        <#code#>
-    }*/
+ 
     
     func validateFields() -> String?
     {
@@ -71,7 +63,6 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
         */
         
-
         return nil
     }
     
@@ -91,10 +82,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let email = Email.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let password = Password.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let selectedValue = AccTypePicker.selectedRow(inComponent: 0)
-        print(selectedValue)
+        
+        
         // Create the user
         Firebase.Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-            if err != nil && error != nil {
+            if err != nil || error != nil {
                 
                 self.ErrorLabel.text = error!
                 self.ErrorLabel.alpha = 1
@@ -109,6 +101,8 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                             print("Error")
                             // Show error message
                         } else {
+                            let mystr = String(user.uid)
+                            db.collection("userInfo").document(mystr).setData(["isPatient":selectedValue])
                             self.transitionToHome(accountType: selectedValue, sender: sender)
                         }
                     }
@@ -124,7 +118,15 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func transitionToHome(accountType: Int, sender: Any)
     {
-        performSegue(withIdentifier: "signupnext", sender: sender)
+        if(accountType == 0)
+        {
+            performSegue(withIdentifier: "signupnextvolunteer", sender: sender)
+        }
+        else
+        {
+            performSegue(withIdentifier: "signupnextpatient", sender: sender)
+        }
+        
         
 
     }

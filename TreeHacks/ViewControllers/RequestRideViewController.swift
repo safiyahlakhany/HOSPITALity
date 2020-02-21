@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RequestRideViewController: UIViewController {
 
@@ -20,7 +21,20 @@ class RequestRideViewController: UIViewController {
     @IBOutlet weak var OperationTF: UITextField!
     
     
+    
+    @IBAction func SubmitPressed(_ sender: Any) {
+        
+        //print(DatePicker.value)
+    }
+    
+    
+    
     override func viewDidLoad() {
+        guard let uid12 = Auth.auth().currentUser?.uid else {
+            return
+        }
+        print("User ID post guard: \(uid12)")
+//        print(Firebase.Autho.auth.currentUser?.uid)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

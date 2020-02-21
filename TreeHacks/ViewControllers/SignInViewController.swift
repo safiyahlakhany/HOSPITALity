@@ -44,8 +44,13 @@ class SignInViewController: UIViewController {
             }
             
             else{
-               
+                var user = Firebase.Auth.auth().currentUser
+                if let user = user {
+                    let patient = user.value(forKey: "isPatient")
+                    print(patient)
+                }
                 self.transitionToHome(accountType: 0, sender: (Any).self)
+                print(user)
             }
         }
     }
@@ -75,6 +80,8 @@ class SignInViewController: UIViewController {
 //
     func transitionToHome(accountType: Int, sender: Any)
     {
+        //var ref = Firebase.database().ref("users");
+       // var userTable =
 //    {   var list: DatabaseQuery?
 //        let group = DispatchGroup()
 //        group.enter()
@@ -100,7 +107,6 @@ class SignInViewController: UIViewController {
 //            print(error.localizedDescription)
 //        }
 
-        //print(value(forKey: "isPatient"))
         performSegue(withIdentifier: "signinnext", sender: sender)
     }
     
